@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  
+    
+</head>
+<body>
+  <div class="container-fluid main-background">
+    <div class="row  w-75 rounded-2 bg-white shadow">
+        <div class="col-md-12 py-4">
+            <h3 class="text-center text-decoration-underline ">TYPING MASTER</h3>
+            <p id="match" class="text-center fs-1 text-danger"></p>
+            <div class="mb-3 w-100">
+                <h4 id="h">During our school days, we all must have written various types of essays, paragraphs, etc. We were taught to write essays on various topics. The importance of a morning walk is only read in books and magazines or heard from doctors or advisors, but the effects of a morning walk can be felt only after you make it a habit. It helps in maintaining a healthy and proper schedule and keeps our mood fresh.</h4>
+
+
+            </div>
+            <div class="my-3 w-100 typed">
+                <textarea  class="w-100" id="input" onkeyup="typing()" placeholder="type here.....">
+        
+                </textarea>
+
+            </div>
+            <hr>
+        
+       
+            <div class="mb-3 w-100 border border-dark">
+                <p id="textarea" class="w-100"></p>
+
+            </div>
+          
+         
+        </div>
+
+    </div>
+
+  </div>
+    
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script>
+      
+        function typing(){
+            let input=document.querySelector("#input")
+            let value=input.value
+            let textarea=document.querySelector("#textarea")
+            textarea.innerText=value
+            let h=document.querySelector("#h").value
+           
+          
+        }
+        var count = 60, timer = setInterval(function() {
+    $("#match").html(count--);
+    if(count == 1) clearInterval(timer);
+}, 1000);
+      
+      
+          
+    </script>
+</body>
+</html>
